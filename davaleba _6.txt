@@ -1,0 +1,43 @@
+# 1
+class Currency:
+    def __init__(self, value, unit):
+        self.value = value
+        self.unit = unit
+
+    def __str__(self):
+        return f" : {self.value} {self.unit}, {self.humidity} % "
+
+    def convert(self):
+        if self.unit == "F":
+            w = (self. - 32) / 1.8
+            return w, "C", self.humidity
+        else:
+            return ""
+
+
+# 3
+class Plane:
+    def move(self):
+        print("plane can fly")
+
+    def speed(self):
+        print("its speed is up to  900km/h")
+
+
+class Bus:
+    def move(self):
+        print("bus can move on roads")
+
+    def speed(self):
+        print("its speed is up to 180km/h")
+
+
+def movementt(obje):
+    obje.move()
+    obje.speed()
+
+
+l = Plane()
+m = Bus()
+movementt(l)
+movementt(m)
